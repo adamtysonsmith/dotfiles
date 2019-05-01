@@ -4,7 +4,6 @@ Plug 'ervandew/supertab'
 Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-scripts/BufOnly.vim'
-Plug 'jiangmiao/auto-pairs'
 Plug 'jeetsukumaran/vim-indentwise'
 Plug 'majutsushi/tagbar'
 
@@ -51,6 +50,9 @@ Plug 'tpope/vim-unimpaired'
 
 " Vim sugar for unix shell commands :Delete, :Rename, :Move, etc.
 Plug 'tpope/vim-eunuch'
+
+" Automatically end vim/bash functions and if statements (and others)
+Plug 'tpope/vim-endwise'
 " }}}
 
 " Status and tab line
@@ -72,6 +74,9 @@ Plug 'alvan/vim-closetag'
 Plug 'elzr/vim-json'
 Plug 'suan/vim-instant-markdown'
 Plug 'vim-scripts/changesqlcase.vim'
+Plug 'tmux-plugins/vim-tmux'
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+" Plug 'sheerun/vim-polyglot'
 
 " NERDTree
 Plug 'scrooloose/nerdtree'
@@ -83,6 +88,7 @@ Plug 'ryanoasis/vim-devicons'
 
 "" Colorschemes
 Plug 'Yggdroot/indentLine'
+" Plug 'gertjanreynaert/cobalt2-vim-theme'
 " Plug 'ajh17/Spacegray.vim'
 " Plug 'flazz/vim-colorschemes'
 Plug 'gerw/vim-HiLinkTrace'

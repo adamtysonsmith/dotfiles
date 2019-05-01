@@ -469,6 +469,7 @@ for_window [class="Google-chrome" title="Google Calendar - "] move to workspace 
 for_window [class="Google-chrome" title="Yaguara Slack"] move to workspace Slack
 for_window [class="Google-chrome" title="Yaguara Community Slack"] move to workspace Slack
 for_window [class="Spotify"] move to workspace Spotify
+for_window [class="Google-chrome" title="Jira"] move to workspace Jira
 
 # Connect to home wifi
 bindsym $mod+Shift+w exec nmcli con up Home
@@ -476,6 +477,7 @@ bindsym $mod+Shift+w exec nmcli con up Home
 bindsym $mod+e workspace Email
 bindsym $mod+s workspace Slack
 bindsym $mod+o workspace Spotify
+bindsym $mod+i workspace Jira
 
 set $monitor_mode Monitor config: [a]uto [h]dmi left [d]p1 left [m]edium res [l]ow res [x]tra low res
 bindsym $mod+m mode $monitor_mode
@@ -498,7 +500,7 @@ mode "$monitor_mode" {
         bindsym Escape mode "default"
 }
 
-set $launch_app_mode Launch app: [c]hrome | sp[o]tify | [p]ersonal email | [w]ork email | [s]lack | co[m]munity slack | work c[a]lendar | persona[l] calendar
+set $launch_app_mode Launch app: [c]hrome | sp[o]tify | [p]ersonal email | [w]ork email | [s]lack | co[m]munity slack | work c[a]lendar | persona[l] calendar | j[i]ra
 bindsym $mod+u mode $launch_app_mode
 mode "$launch_app_mode" {
         bindsym o exec spotify
@@ -509,6 +511,7 @@ mode "$launch_app_mode" {
         bindsym m exec $browser --app='https://yaguaracommunity.slack.com/'
         bindsym a exec $browser --app='https://calendar.google.com/calendar/b/1/r'
         bindsym l exec $browser --app='https://calendar.google.com/calendar'
+        bindsym i exec $browser --app='https://yaguara.atlassian.net/secure/RapidBoard.jspa'
 
         # exit monitor mode: Enter or Escape
         bindsym Return mode "default"

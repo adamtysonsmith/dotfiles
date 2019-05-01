@@ -133,6 +133,7 @@ nnoremap <leader>Q :q!<cr>
 nnoremap <leader>rf dt(f)a =><esc>
 nnoremap <leader>rs <esc>:syntax sync fromstart<cr>
 nnoremap <leader>rw :Rg <c-r><c-w><cr>
+nnoremap <leader>sa :wa<cr>
 nnoremap <leader>si :SortImport<cr>
 vnoremap <leader>su :call ChangeSqlCase()<cr><cr>
 " Surround with spaces
@@ -216,7 +217,7 @@ augroup mygroup
 
     autocmd bufreadpre *.md setlocal textwidth=80
 
-    autocmd Filetype javascript,typescript setlocal ts=2 sts=2 sw=2
+    autocmd Filetype javascript,typescript,json setlocal ts=2 sts=2 sw=2
 
     " NERDTree stuff
     autocmd bufenter * if @% == '__doc__' | nnoremap <silent> <buffer> q :bd<cr> | endif
@@ -235,6 +236,7 @@ augroup mygroup
     " Set yaml folds to 2 space
     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
     autocmd BufNewFile,BufRead *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html nnoremap <buffer> <leader>w :PrettierAsync<cr>:w!<cr>
+
     " fzf hide statusline
     autocmd! FileType fzf
     autocmd  FileType fzf set laststatus=0 noshowmode noruler
@@ -260,6 +262,12 @@ augroup END
 " let g:gruvbox_bold = 1
 " let g:gruvbox_contrast_dark = 'soft'
 " colorscheme gruvbox
+let g:onedark_terminal_italics = 1
+colorscheme onedark
+
+" let g:oceanic_next_terminal_bold = 1
+" let g:oceanic_next_terminal_italic = 1
+" colorscheme OceanicNext
 
 " onedark
 let g:onedark_hide_endofbuffer=1
@@ -272,6 +280,7 @@ colorscheme onedark
 
 " vim-prettier
 let g:prettier#autoformat = 0
+" Moved this logic to a save mapping that only gets set for these file types
 " autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 " vim-jsx-pretty
