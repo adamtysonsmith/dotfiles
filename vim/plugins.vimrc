@@ -27,10 +27,13 @@ Plug 'bronson/vim-visual-star-search'
 Plug 'dgraham/vim-eslint'
 Plug 'ruanyl/vim-sort-imports'
 Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+  \ 'do': 'yarn install'}
+  " \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
-" tpope {{{
+" General Language Support
+Plug 'sheerun/vim-polyglot'
+
+"" tpope {{{
 " :S command, change case (crs, crc, etc.)
 Plug 'tpope/vim-abolish'
 
@@ -69,14 +72,16 @@ Plug 'alvan/vim-closetag'
 Plug 'elzr/vim-json'
 Plug 'suan/vim-instant-markdown'
 Plug 'vim-scripts/changesqlcase.vim'
-" Plug 'sheerun/vim-polyglot'
 
 " NERDTree
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 " Plug 'dsimidzija/vim-nerdtree-ignore', { 'on': 'NERDTreeToggle' }
 
-" Colorschemes
+Plug 'ryanoasis/vim-devicons'
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
+"" Colorschemes
 Plug 'Yggdroot/indentLine'
 " Plug 'ajh17/Spacegray.vim'
 " Plug 'flazz/vim-colorschemes'
@@ -85,9 +90,10 @@ Plug 'ryanoasis/vim-devicons'
 " Plug 'fneu/breezy'
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
+Plug 'mhartington/oceanic-next'
 " Plug 'cocopon/iceberg.vim'
 " Plug 'drewtempelmeyer/palenight.vim'
 " Plug 'sickill/vim-monokai'
 " Plug 'bounceme/highwayman'
 " Plug 'rafi/awesome-vim-colorschemes'
-" Plug 'mhartington/oceanic-next'
+Plug 'tomasiser/vim-code-dark'

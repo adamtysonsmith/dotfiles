@@ -1,5 +1,15 @@
 let g:configDir = $HOME . '/.vim'
 
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+syntax enable
+
+colorscheme mysticaltutor
+colorscheme OceanicNext
+colorscheme OceanicNextLight
+
 " {{{ Plugins
 filetype off
 

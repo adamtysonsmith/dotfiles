@@ -145,7 +145,7 @@ nnoremap <leader>tt :TSType<cr>
  " /<leader>t
 nnoremap <leader>U :UltiSnipsEdit<cr>
 nnoremap <leader>v :e  ~/.dotfiles/vim/general.vimrc<cr>
-nnoremap <leader>w :PrettierAsync<cr>:w!<cr>
+nnoremap <leader>w :w!<cr>
 
 " Visual
 vnoremap <leader>cl :call ConsoleLog()<cr>
@@ -234,7 +234,7 @@ augroup mygroup
 
     " Set yaml folds to 2 space
     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-
+    autocmd BufNewFile,BufRead *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html nnoremap <buffer> <leader>w :PrettierAsync<cr>:w!<cr>
     " fzf hide statusline
     autocmd! FileType fzf
     autocmd  FileType fzf set laststatus=0 noshowmode noruler
@@ -256,15 +256,19 @@ augroup END
 
 " {{{ Plugin Config
 " gruvbox
-let g:gruvbox_italic = 1
-let g:gruvbox_bold = 1
-let g:gruvbox_contrast_dark = 'soft'
-colorscheme gruvbox
+" let g:gruvbox_italic = 1
+" let g:gruvbox_bold = 1
+" let g:gruvbox_contrast_dark = 'soft'
+" colorscheme gruvbox
 
 " onedark
-" let g:onedark_hide_endofbuffer=1
-" let g:onedark_terminal_italics=1
-" colorscheme onedark
+let g:onedark_hide_endofbuffer=1
+let g:onedark_terminal_italics=1
+colorscheme onedark
+
+" let g:oceanic_next_terminal_bold = 1
+" let g:oceanic_next_terminal_italic = 1
+" colorscheme OceanicNext
 
 " vim-prettier
 let g:prettier#autoformat = 0
@@ -305,7 +309,7 @@ let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
 
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --hidden --ignore-file ~/.rgignore --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   'rg --hidden --ignore-file ~/.rgignore --column --line-number --no-heading --color=always --smart-case --follow '.shellescape(<q-args>), 1,
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
@@ -372,10 +376,10 @@ let g:sql_type_default = 'pgsql'
 
 " Lightline
 let g:lightline = {
-  \ 'colorscheme': 'gruvbox',
+  \ 'colorscheme': 'onedark',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ],
-  \           [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+  \           [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],
   \   'right': [ [ 'lineinfo' ],
   \              [ 'percent' ],
   \              [ 'filetype' ] ]
