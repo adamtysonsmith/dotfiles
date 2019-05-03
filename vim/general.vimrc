@@ -217,7 +217,7 @@ augroup mygroup
 
     autocmd bufreadpre *.md setlocal textwidth=80
 
-    autocmd Filetype javascript,typescript,json setlocal ts=2 sts=2 sw=2
+    autocmd Filetype javascript,typescript,typescript.tsx,json setlocal ts=2 sts=2 sw=2
 
     " NERDTree stuff
     autocmd bufenter * if @% == '__doc__' | nnoremap <silent> <buffer> q :bd<cr> | endif
