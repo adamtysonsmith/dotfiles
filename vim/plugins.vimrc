@@ -30,7 +30,6 @@ Plug 'prettier/vim-prettier', {
   " \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 " General Language Support
-Plug 'sheerun/vim-polyglot'
 
 "" tpope {{{
 " :S command, change case (crs, crc, etc.)
@@ -75,6 +74,7 @@ Plug 'elzr/vim-json'
 Plug 'suan/vim-instant-markdown'
 Plug 'vim-scripts/changesqlcase.vim'
 Plug 'tmux-plugins/vim-tmux'
+Plug 'elixir-editors/vim-elixir'
 " Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 " Plug 'sheerun/vim-polyglot'
 
@@ -103,3 +103,4 @@ Plug 'mhartington/oceanic-next'
 " Plug 'bounceme/highwayman'
 " Plug 'rafi/awesome-vim-colorschemes'
 Plug 'tomasiser/vim-code-dark'
+Plug 'liuchengxu/space-vim-dark'

@@ -256,27 +256,39 @@ augroup filetype_quickfix
 augroup END
 " }}}
 
+
 " {{{ Plugin Config
 " gruvbox
 " let g:gruvbox_italic = 1
 " let g:gruvbox_bold = 1
 " let g:gruvbox_contrast_dark = 'soft'
 " colorscheme gruvbox
-let g:onedark_terminal_italics = 1
-colorscheme onedark
+" let g:onedark_terminal_italics = 1
+" colorscheme onedark
 
 " let g:oceanic_next_terminal_bold = 1
 " let g:oceanic_next_terminal_italic = 1
 " colorscheme OceanicNext
 
 " onedark
-let g:onedark_hide_endofbuffer=1
-let g:onedark_terminal_italics=1
-colorscheme onedark
+" let g:onedark_hide_endofbuffer=1
+" let g:onedark_terminal_italics=1
+" colorscheme onedark
 
 " let g:oceanic_next_terminal_bold = 1
 " let g:oceanic_next_terminal_italic = 1
 " colorscheme OceanicNext
+
+" space-vim-dark config
+colorscheme space-vim-dark
+
+hi Comment cterm=italic
+hi Comment guifg=#5C6370 ctermfg=59
+
+hi Normal     ctermbg=NONE guibg=NONE
+hi LineNr     ctermbg=NONE guibg=NONE
+hi SignColumn ctermbg=NONE guibg=NONE
+" end space-vim-dark config
 
 " vim-prettier
 let g:prettier#autoformat = 0

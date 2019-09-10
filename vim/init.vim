@@ -1,5 +1,6 @@
 let g:configDir = $HOME . '/.config/nvim'
 
+
 " {{{ Plugins and config
 filetype off
 
